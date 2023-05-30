@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-black: #1c1c1c;
+    --clr-gray: #ececec;
+    --clr-white: #f7f7f7;
+
+    --type-normal: #a3a3a3;
+    --type-alive: #00f72d;
+    --type-dead: #e70110;
+    --type-human: #004bee;
+    --type-alien: #1c6b1c;
+    --type-humanoid: #ceaa18;
+    --type-poopybutthole: #4988a6;
+    --type-disease: #19905c;
+    --type-mythologicalcreature:#6c3333;
+    --type-robot:#a8a8a8;
+    --type-cronenberg:#d6aab4;
+    --type-animal:#b7680e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--clr-black);
+    font-family: 'Rubik', sans-serif;
+}
+
+main {
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+body {
+    background-image: url(fondo2.jpg);
+    background-size:auto;
+
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    border-radius: 100vmax;
+    padding: .5rem;
+    color: var(--type-mythologicalcreature);
+}
+
+.btn-header {
+    background-color: var(--clr-black);
+    border: 1px solid;
+    padding: .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    transition: .2s;
+}
+
+.btn-header:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+
+button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding-inline: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.rym-todos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.rym {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px; /* Ancho de la tarjeta */
+    border: 1px solid #929292; /* Borde de la tarjeta */
+    border-radius: 10%; /* Borde redondeado */
+    overflow: hidden;
+    background-image: url(fondo2.jpg);
+    background-size: cover;
+    background-repeat:unset;
+    background-position: bottom;
+    transition: transform 0.3s ease;
+}
+
+.rym:hover {
+    transform: scale(1.05);
+  }
+
+.rym-nombre{
+    color: white;
+}
+
+.rym-id {
+    color: white;
+}
+
+.rym-imagen {
+    width: 100%; /* Ancho de la imagen (ocupará todo el ancho de la tarjeta) */
+  height: auto; 
+}
+
+.caracteristicas {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.tipo {
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.nombre-contenedor {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  
+  .search-button {
+    padding: 8px 12px;
+    background-color: #00ff4c;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+/* Aquí todo el CSS extra */
+
+
+
+/* Aquí comienzan los colores de botones según tipo */
+.verTodos { 
+    color: var(--type-normal);
+    
+}
+
+.Alive {
+  
+    color: var(--type-alive);
+}
+
+.Dead {
+  
+    color: var(--type-dead);
+}
+
+.Human {
+ 
+    color: var(--type-human);
+}
+
+.Alien {
+
+    color: var(--type-alien);
+}
+
+.Humanoid{
+
+    color: var(--type-humanoid);
+}
+
+.unknown { 
+    color: var(--type-normal);
+    
+}
+
+.Poopybutthole { 
+    color: var(--type-poopybutthole);
+    
+}
+
+.Disease { 
+    color: var(--type-disease);
+    
+}
+
+.Mythologicalcreature { 
+    color: var(--type-mythologicalcreature);
+    
+}
+
+.Robot { 
+    color: var(--type-robot);
+    
+}
+
+.Cronenberg { 
+    color: var(--type-cronenberg);
+    
+}
+
+.Animal { 
+    color: var(--type-animal);
+    
+}
+
+@media screen and (max-width: 996px) {
+    .rym-todos {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        
+    }
+  
+
+}
+
+@media screen and (max-width: 768px) {
+    .rym-todos {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        
+    }
+  
+
+}
